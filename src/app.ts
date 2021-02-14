@@ -1,5 +1,7 @@
-const world = "world";
+window.addEventListener("load", () => {
+  const header = document.createElement("h1");
+  header.innerText = "Webpack❤️TS"
 
-export function hello(word: string = world): string {
-  return `Hello ${word}! `;
-}
+  const body = document.querySelector("body");
+  body.appendChild(header);
+})
