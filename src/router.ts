@@ -17,9 +17,9 @@ const router = async () => {
     const footer = null || document.getElementById('footer');
 
     navbar.innerHTML = await Navbar.render();
-    await Navbar.after_render();
+    await Navbar.post_render();
     footer.innerHTML = await Footer.render();
-    await Footer.after_render();
+    await Footer.post_render();
 
     const path = window.location.pathname;
 

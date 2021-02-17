@@ -10,7 +10,7 @@ const Navbar = {
 
         return view;
     },
-    after_render: async () => { },
+    post_render: async () => { },
 };
 
 export default Navbar;
