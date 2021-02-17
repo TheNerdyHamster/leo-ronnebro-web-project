@@ -6,8 +6,8 @@
     "author": "Leo Rönnebro <leo.ronnebro@nerdyhamster.net>",
     "license": "MIT",
     "scripts": {
-        "dev": "parcel serve ./src/templates/*.html",
-        "build": "parcel build ./src/templates/*.html",
+        "dev": "parcel serve ./src/*.html",
+        "build": "parcel build ./src/*.html",
         "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
     },
     "devDependencies": {
