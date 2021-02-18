@@ -1,3 +1,4 @@
+import { spotify } from '../../services/spotify'
 const Navbar = {
     render: async (): Promise<string> => {
         const view = `
@@ -14,11 +15,8 @@ const Navbar = {
                     <li>
                         <a href="#">About</a>
                     </li>
-                    <li>
+                    <li id="login">
                         <a href="#">Login</a>
-                    </li>
-                    <li>
-                        <a href="#">Register</a>
                     </li>
                 </ul>
             </nav>
@@ -27,7 +25,12 @@ const Navbar = {
 
         return view;
     },
-    post_render: async () => { },
+    post_render: async (): Promise<void> => {
+        const button = <HTMLButtonElement>document.getElementById('login');
+        button.onclick = () => {
+            location.href = spotify.GenerateURL();
+        };
+    },
 };
 
 export default Navbar;

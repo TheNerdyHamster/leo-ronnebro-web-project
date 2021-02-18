@@ -5,8 +5,8 @@
 }
 
 body {
-    background: #222222;
-    color: white;
+    background: #101010;
+    color: #828282;
 }
 
 .navbar {
@@ -21,7 +21,7 @@ body {
         text-transform: uppercase;
 
         a, a:visited {
-            color: white;
+            color: #828282;
             text-decoration: none;
         }
     }
@@ -31,7 +31,7 @@ body {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        background: black;
+        background: #1f1f1f;
         border-radius: 0px 0px 25px 25px;
 
         ul {
@@ -46,20 +46,23 @@ body {
                     padding: 0 20px;
                     line-height: 60px;
                     background: none;
-                    color: #ffff;
+                    color: #828282;
                     text-decoration: none;
                 }
                 a:hover {
-                    background: burlywood;
+                    background: #c38fff;
+                    color: #101010;
                     border-radius: inherit;
 
                 }
 
                 &:first-child:hover {
+                    padding-bottom: 20px;
                     border-radius: 0px 0px 0px 25px;
                 }
 
                 &:last-child:hover {
+                    padding-right: 20px;
                     border-radius: 0px 0px 25px 0px;
                 }
             }

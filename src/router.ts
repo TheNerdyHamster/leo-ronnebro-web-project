@@ -6,9 +6,11 @@ import Navbar from './views/components/navbar';
 import Footer from './views/components/footer';
 
 import Error404 from './views/pages/error404';
+import Auth from './views/pages/auth'
 
 const routes = {
     '/': Home,
+    '/auth': Auth,
 };
 
 const router = async () => {
@@ -25,7 +27,7 @@ const router = async () => {
 
     const page = routes[path] ? routes[path] : Error404;
     content.innerHTML = await page.render();
-    await page.after_render();
+    await page.post_render();
 };
 
 // Rerender page on hash change or load.
