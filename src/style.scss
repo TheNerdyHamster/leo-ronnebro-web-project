@@ -1,3 +1,23 @@
+
+/* Variabels */
+
+$dark0: #2e3440;
+$dark1: #3b4252;
+$dark2: #434c5e;
+$dark3: #4c566a;
+
+$light0: #d8dee9;
+$light1: #e5e9f0;
+$light2: #eceff4;
+
+$attention0: #8fbcbb;
+$attention1: #81a1ca;
+
+$warning: #ebcb8b;
+$error: #bf616a;
+$success: #a3be8c;
+$spotify: #1DB954;
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +25,79 @@
 }
 
 body {
-    background: #101010;
-    color: #828282;
+    background-image: url("https://images.pexels.com/photos/1916824/pexels-photo-1916824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-repeat: no-repeat;
+    color: $light1;
+}
+
+.container {
+    display: block;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.home {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $dark0;
+    box-shadow: 0px 0px 45px 21px rgba(59,66,82,0.55);
+    border: 1px solid rgba(0,0,0,0.50);
+    padding: 20px;
+    border-radius: 25px;
+
+    .links {
+        display: block;
+        margin: auto 0;
+    }
+    .title {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 30px;
+
+        p {
+            color: $attention0;
+            font-weight: bold;
+
+            span {
+                font-weight: normal;
+                color: $light2;
+            }
+        }
+    }
+
+    .login {
+        margin-bottom: 20px;
+        button {
+            background-color: $spotify;
+            border: none;
+            border-radius: 10px;
+            color: $light2;
+            padding: 10px;
+            width: 220px;
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0px 0px 27px -5px rgba(59,66,82,0.90);
+            }
+        }
+
+    }
+
+    .about {
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: $attention1;
+
+            &:hover {
+                text-decoration: underline;
+                color: $light0;
+            }
+        }
+    }
 }
 
 .navbar {
@@ -21,7 +112,7 @@ body {
         text-transform: uppercase;
 
         a, a:visited {
-            color: #828282;
+            color: $light0;
             text-decoration: none;
         }
     }
@@ -31,7 +122,7 @@ body {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        background: #1f1f1f;
+        background: $dark2;
         border-radius: 0px 0px 25px 25px;
 
         ul {
@@ -46,23 +137,21 @@ body {
                     padding: 0 20px;
                     line-height: 60px;
                     background: none;
-                    color: #828282;
+                    color: $light0;
                     text-decoration: none;
                 }
                 a:hover {
-                    background: #c38fff;
-                    color: #101010;
+                    background: $dark1;
+                    color: $light0;
                     border-radius: inherit;
 
                 }
 
                 &:first-child:hover {
-                    padding-bottom: 20px;
                     border-radius: 0px 0px 0px 25px;
                 }
 
                 &:last-child:hover {
-                    padding-right: 20px;
                     border-radius: 0px 0px 25px 0px;
                 }
             }

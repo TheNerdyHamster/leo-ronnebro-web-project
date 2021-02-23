@@ -1,14 +1,33 @@
+import { spotify } from '../../services/spotify'
+
 const Home = {
     render: async (): Promise<string> => {
         const view = `
-            <selection class="section">
-                <h1> Home </h1>
-            </selection>
+            <div id="home">
+                <div class="home">
+                    <div class="title">
+                        <p>TNH<span>Profiler</span></p>
+                    </div>
+                    <div class="links">
+                        <div class="login">
+                            <button id="login">Connect with Spotify</button>
+                        </div>
+                        <div class="about">
+                            <a href="/about">About creator</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         `;
 
         return view;
     },
-    post_render: async () => {},
+    post_render: async () => {
+        const button = <HTMLButtonElement>document.getElementById('login');
+        button.onclick = () => {
+            location.href = spotify.GenerateURL();
+        };
+    },
 };
 
 export default Home;

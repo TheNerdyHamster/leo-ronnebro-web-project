@@ -1,8 +1,8 @@
-const Error404 = {
+const About = {
     render: async (): Promise<string> => {
         const view = `
-            <div id="error">
-                <h1> 404 Error </h1>
+            <div id="about">
+                <h1> About </h1>
             </div>
         `;
 
@@ -11,4 +11,4 @@ const Error404 = {
     post_render: async () => {},
 };
 
-export default Error404;
+export default About;

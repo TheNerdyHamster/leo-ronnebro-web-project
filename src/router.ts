@@ -1,27 +1,17 @@
 // Pages
 import Home from './views/pages/home';
-
-// Components
-import Navbar from './views/components/navbar';
-import Footer from './views/components/footer';
-
 import Error404 from './views/pages/error404';
-import Auth from './views/pages/auth'
+import Auth from './views/pages/auth';
+import About from './views/pages/about';
 
 const routes = {
     '/': Home,
     '/auth': Auth,
+    '/about': About,
 };
 
 const router = async () => {
-    const navbar = null || document.getElementById('navbar');
     const content = null || document.getElementById('content');
-    const footer = null || document.getElementById('footer');
-
-    navbar.innerHTML = await Navbar.render();
-    await Navbar.post_render();
-    footer.innerHTML = await Footer.render();
-    await Footer.post_render();
 
     const path = window.location.pathname;
 
