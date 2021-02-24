@@ -1,5 +1,9 @@
 # Log book
 
+## 2021-02-24
+Completed basics auth, with simple cookie management.
+Changed main font to roboto.
+
 ## 2021-02-23
 Completed home page, removed navbar and footer due to lack of use.
 
