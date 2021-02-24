@@ -1,4 +1,5 @@
-import { spotify } from '../../services/spotify'
+import { spotify } from '../../services/spotify';
+import Utils from '../../Utils';
 
 const Home = {
     render: async (): Promise<string> => {
@@ -27,6 +28,9 @@ const Home = {
         button.onclick = () => {
             location.href = spotify.GenerateURL();
         };
+
+        console.log(Utils.validateCookie());
+        console.log(Utils.getToken());
     },
 };
 

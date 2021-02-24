@@ -22,6 +22,7 @@ $spotify: #1DB954;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -32,7 +33,7 @@ body {
 
 .container {
     display: block;
-    width: 70%;
+    width: 80%;
     height: 100%;
     margin: 0 auto;
 }
@@ -47,7 +48,6 @@ body {
     border: 1px solid rgba(0,0,0,0.50);
     padding: 20px;
     border-radius: 25px;
-
     .links {
         display: block;
         margin: auto 0;
@@ -100,61 +100,57 @@ body {
     }
 }
 
-.navbar {
-    height: 60px;
+#auth {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $dark0;
+    box-shadow: 0px 0px 45px 21px rgba(59,66,82,0.55);
+    border: 1px solid rgba(0,0,0,0.75);
+    padding: 20px;
+    border-radius: 25px;
 
-    .logo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        line-height: 60px;
-        padding-left: 20px;
-        text-transform: uppercase;
+    .result {
+        padding: 20px 10px;
+        font-size: 20px;
+        text-align: center;
 
-        a, a:visited {
-            color: $light0;
-            text-decoration: none;
+
+        .hidden {
+            display: none;
         }
-    }
 
-    nav {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        background: $dark2;
-        border-radius: 0px 0px 25px 25px;
+        #success {
+            color: $success;
 
-        ul {
-            list-style: none;
+            p:first-child {
+                margin-bottom: 20px;
+                font-size: 24px;
+                font-weight: bold;
 
-            li {
-                float: left;
-                position: relative;
-
-                a, a:visited {
-                    display: block;
-                    padding: 0 20px;
-                    line-height: 60px;
-                    background: none;
-                    color: $light0;
-                    text-decoration: none;
-                }
-                a:hover {
-                    background: $dark1;
-                    color: $light0;
-                    border-radius: inherit;
-
-                }
-
-                &:first-child:hover {
-                    border-radius: 0px 0px 0px 25px;
-                }
-
-                &:last-child:hover {
-                    border-radius: 0px 0px 25px 0px;
-                }
             }
+
+            .message {
+                color: $attention1;
+                font-size: 22px;
+            }
+        }
+
+        #failed {
+            p {
+                color: $error;
+                margin-bottom: 20px;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            a {
+                font-size: 18px;
+                text-decoration: underline;
+                color: $attention1;
+            }
+
         }
     }
 }
