@@ -3,10 +3,12 @@ import Home from './views/pages/Home';
 import Error404 from './views/pages/Error404';
 import Auth from './views/pages/Auth';
 import About from './views/pages/About';
+import Profile from './views/pages/Profile';
 
 const routes = {
     '/': Home,
     '/auth': Auth,
+    '/profile': Profile,
     '/about': About,
 };
 
