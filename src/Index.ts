@@ -1,3 +1,3 @@
 import './style.scss';
 
-import './router';
+import './Router';

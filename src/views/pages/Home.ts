@@ -1,4 +1,4 @@
-import { spotify } from '../../services/spotify';
+import { spotify } from '../../services/Spotify';
 import Utils from '../../Utils';
 
 const Home = {
@@ -25,12 +25,16 @@ const Home = {
     },
     post_render: async () => {
         const button = <HTMLButtonElement>document.getElementById('login');
-        button.onclick = () => {
-            location.href = spotify.GenerateURL();
-        };
 
-        console.log(Utils.validateCookie());
-        console.log(Utils.getToken());
+        let url = spotify.GenerateURL();
+        if (Utils.validateCookie()) {
+            url = '/account';
+            button.innerText = 'Go to your account!';
+        }
+
+        button.onclick = () => {
+            location.href = url;
+        };
     },
 };
 

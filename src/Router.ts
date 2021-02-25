@@ -1,8 +1,8 @@
 // Pages
-import Home from './views/pages/home';
-import Error404 from './views/pages/error404';
-import Auth from './views/pages/auth';
-import About from './views/pages/about';
+import Home from './views/pages/Home';
+import Error404 from './views/pages/Error404';
+import Auth from './views/pages/Auth';
+import About from './views/pages/About';
 
 const routes = {
     '/': Home,
