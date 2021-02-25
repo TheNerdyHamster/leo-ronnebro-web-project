@@ -40,6 +40,10 @@ const Auth = {
 
             const userData = await Spotify.fetchProfile();
             nameElement.innerText = userData.display_name;
+
+            window.setTimeout(function () {
+                window.location.href = 'http://localhost:1234/profile';
+            }, 5000);
         } else {
             successElement.style.display = 'none';
             failedElement.style.display = 'block';
