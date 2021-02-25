@@ -28,8 +28,8 @@ const Home = {
 
         let url = Spotify.GenerateURL();
         if (Utils.validateCookie()) {
-            url = '/account';
-            button.innerText = 'Go to your account!';
+            url = '/profile';
+            button.innerText = 'Go to your profile!';
         }
 
         button.onclick = () => {

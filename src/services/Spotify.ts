@@ -15,9 +15,9 @@ export type Profile = {
     external_urls: {
         spotify: string;
     };
-    images: {
+    images: Array<{
         url: string;
-    };
+    }>;
 };
 
 class spotify {
