@@ -42,7 +42,7 @@ const Auth = {
             nameElement.innerText = userData.display_name;
 
             window.setTimeout(function () {
-                window.location.href = 'http://localhost:1234/profile';
+                window.location.href = 'https://localhost:1234/profile';
             }, 5000);
         } else {
             successElement.style.display = 'none';

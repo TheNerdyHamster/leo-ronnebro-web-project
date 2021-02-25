@@ -3,7 +3,7 @@ const Utils = {
         return new Promise((resolve) => setTimeout(resolve, ms));
     },
 
-    generateCookie: (token: string, length: number): void => {
+    generateCookie: (token: string, length: string): void => {
         document.cookie = `token=${token};max-age=${Number(length)};path=/;samesite=strict`;
     },
 
