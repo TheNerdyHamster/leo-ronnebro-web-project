@@ -1,4 +1,4 @@
-import { spotify } from '../../services/Spotify';
+import { Spotify } from '../../services/Spotify';
 import Utils from '../../Utils';
 
 const Home = {
@@ -26,7 +26,7 @@ const Home = {
     post_render: async () => {
         const button = <HTMLButtonElement>document.getElementById('login');
 
-        let url = spotify.GenerateURL();
+        let url = Spotify.GenerateURL();
         if (Utils.validateCookie()) {
             url = '/account';
             button.innerText = 'Go to your account!';

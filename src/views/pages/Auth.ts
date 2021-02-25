@@ -1,3 +1,4 @@
+import { Spotify } from '../../services/Spotify';
 import Utils from '../../Utils';
 const Auth = {
     render: async (): Promise<string> => {
@@ -6,7 +7,7 @@ const Auth = {
                 <div class="result">
                     <div id="success">
                         <p>Auth success</p>
-                        <p class="message">Welcome $Name</p>
+                        <p class="message">Welcome <span id="name"></span></p>
                     </div>
                     <div id="failed">
                         <div>
@@ -23,6 +24,7 @@ const Auth = {
     post_render: async () => {
         const successElement = <HTMLDivElement>document.getElementById('success');
         const failedElement = <HTMLDivElement>document.getElementById('failed');
+        const nameElement = <HTMLSpanElement>document.getElementById('name');
 
         const data = new Array<string>();
 
@@ -35,7 +37,9 @@ const Auth = {
             failedElement.style.display = 'none';
 
             Utils.generateCookie(data[0], data[1]);
-            Utils.validateCookie();
+
+            const userData = await Spotify.fetchProfile();
+            nameElement.innerText = userData.display_name;
         } else {
             successElement.style.display = 'none';
             failedElement.style.display = 'block';
