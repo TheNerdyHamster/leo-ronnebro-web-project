@@ -38,6 +38,16 @@ body {
     margin: 0 auto;
 }
 
+@media (max-width: 560px) {
+    .container {
+        width: 100%;
+    }
+
+    #about {
+        width: 100%;
+    }
+}
+
 .home {
     position: absolute;
     left: 50%;
@@ -48,6 +58,7 @@ body {
     border: 1px solid rgba(0,0,0,0.50);
     padding: 20px;
     border-radius: 25px;
+
     .links {
         display: block;
         margin: auto 0;
@@ -158,5 +169,98 @@ body {
             }
 
         }
+    }
+}
+
+#about {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $dark0;
+    box-shadow: 0px 0px 45px 21px rgba(59,66,82,0.55);
+    border: 1px solid rgba(0,0,0,0.75);
+    padding: 40px;
+    border-radius: 25px;
+    max-width: 286px;
+
+    .headline {
+        text-align: center;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 45px 21px rgba(59,66,82,0.55);
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            color: $light0;
+        }
+    }
+
+
+    .title {
+        color: $attention1;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    ul {
+        list-style: none;
+        li {
+            display: flex;
+
+            p {
+                color: $light0;
+                font-weight: bold;
+                font-size: 17px;
+                span {
+                    color: $attention0;
+                    font-weight: normal;
+                    font-size: 16px;
+                }
+            }
+
+        }
+    }
+
+    .interests {
+        text-align: center;
+        .list {
+            p {
+                display: inline-block;
+                background: $attention0;
+                padding: 5px;
+                border-radius: 25px;
+                margin: 5px;
+                font-size: 14px;
+                font-weight: bold;
+                color: $dark0;
+            }
+        }
+    }
+
+    button {
+        display: block;
+        margin: 10px auto 0 auto;
+        background-color: transparent;
+        color: $light0;
+        border: none;
+        text-decoration: underline;
+
+        &:hover {
+            cursor: pointer;
+            color: $attention0;
+        }
+
     }
 }
