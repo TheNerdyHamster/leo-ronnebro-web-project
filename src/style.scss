@@ -99,16 +99,18 @@ body {
 
     }
 
-    .about {
-        text-align: center;
-        a {
-            text-decoration: none;
-            color: $attention1;
+}
 
-            &:hover {
-                text-decoration: underline;
-                color: $light0;
-            }
+
+.about-btn {
+    text-align: center;
+    a {
+        text-decoration: none;
+        color: $attention1;
+
+        &:hover {
+            text-decoration: underline;
+            color: $light0;
         }
     }
 }
@@ -180,8 +182,51 @@ body {
     background-color: $dark0;
     box-shadow: 0px 0px 45px 21px rgba(59,66,82,0.55);
     border: 1px solid rgba(0,0,0,0.50);
-    padding: 20px;
+    padding: 30px;
     border-radius: 25px;
+
+    .info {
+        img {
+            display: block;
+            margin: 0 auto;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 45px 21px rgba(59,66,82,0.55);
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: $attention1;
+            margin-bottom: 10px;
+
+            &:hover {
+                color: $light0;
+            }
+        }
+    }
+
+    .data {
+        margin-bottom: 10px;
+        p {
+
+            color: $attention0;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 2px;
+
+            span {
+                color: $light0;
+                font-size: 16px;
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+        }
+    }
 }
 
 #about {

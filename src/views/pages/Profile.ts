@@ -5,14 +5,17 @@ const Profile = {
     render: async (): Promise<string> => {
         const view = `
             <div id="profile">
-                <div>
+                <div class="info">
                     <img id="picture" src=''/>
-                    <p id="name"></p>
+                    <a id="name" target="_blank"></a>
                 </div>
-                <div>
+                <div class="data">
                     <p id="id"></p>
                     <p id="followers"></p>
                     <p id="type"></p>
+                </div>
+                <div class="about-btn">
+                    <a href="/about">About creator</a>
                 </div>
             </div>
         `;
@@ -20,24 +23,23 @@ const Profile = {
         return view;
     },
     post_render: async () => {
-        const validCookie = Utils.validateCookie();
-        if (!validCookie) {
+        if (!Utils.validateCookie()) {
             window.location.pathname = '/';
         }
 
         const profileImage = <HTMLImageElement>document.getElementById('picture');
-        const profileName = <HTMLImageElement>document.getElementById('name');
+        const profileName = <HTMLAnchorElement>document.getElementById('name');
         const profileID = <HTMLImageElement>document.getElementById('id');
         const profileFollowers = <HTMLImageElement>document.getElementById('followers');
         const profileType = <HTMLImageElement>document.getElementById('type');
 
         const data = await Spotify.fetchProfile();
         profileImage.src = data.images[0].url;
-        profileName.innerText = data.display_name;
-        profileID.innerText = data.id;
-        profileFollowers.innerText = data.followers.total.toString();
-        profileType.innerText = data.type;
-
+        profileName.textContent = data.display_name;
+        profileName.href = data.external_urls.spotify;
+        profileID.innerHTML = `ID: <span>${data.id}</span>`;
+        profileFollowers.innerHTML = `Followers: <span>${data.followers.total.toString()}</span>`;
+        profileType.innerHTML = `Account type: <span>${data.type}</span>`;
     },
 };
 
