@@ -31,7 +31,7 @@ const About = {
                     </div>
                 </div>
 
-                <button id="back">Back home</button>
+                <button id="back">Go back</button>
             </div>
         `;
 

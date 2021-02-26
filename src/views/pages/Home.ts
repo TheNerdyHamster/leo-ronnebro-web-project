@@ -13,7 +13,7 @@ const Home = {
                         <div class="login">
                             <button id="login">Connect with Spotify</button>
                         </div>
-                        <div class="about">
+                        <div class="about-btn">
                             <a href="/about">About creator</a>
                         </div>
                     </div>
