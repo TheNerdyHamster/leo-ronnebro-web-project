@@ -1,5 +1,12 @@
 # Log book
 
+## 2021-02-26
+Completed profile, and did some small fixes before the handin.
+
+## 2021-02-24
+Completed about page, auth and started on the basics with profile page.
+
+
 ## 2021-02-24
 Completed basics auth, with simple cookie management.
 Changed main font to roboto.
